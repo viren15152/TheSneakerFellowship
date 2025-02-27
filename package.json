@@ -10,13 +10,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.8.1",
+    "bcryptjs": "^3.0.2",
+    "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-rate-limit": "^7.5.0",
     "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.11.0",
     "morgan": "^1.10.0",
+    "react-bootstrap": "^2.10.9",
+    "react-router-dom": "^7.2.0",
     "sneaks-api": "^1.2.3"
   },
   "devDependencies": {
