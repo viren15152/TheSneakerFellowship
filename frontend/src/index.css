@@ -62,18 +62,23 @@ a:hover {
   font-weight: bold;
 }
 
-/* Buttons */
 button {
-  background-color: var(--accent-color);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: var(--border-radius);
-  transition: all 0.3s ease;
+  background-color: white !important;
+  color: black !important;
+  border: 2px solid white;
+  transition: 0.3s ease-in-out;
 }
 
 button:hover {
-  background-color: var(--hover-color);
+  background-color: black !important;
+  color: white !important;
+  border: 2px solid white;
+}
+
+button:active, button:focus {
+  background-color: #28a745 !important; 
+  border-color: #28a745 !important;
+  color: white !important;
 }
 
 /* Responsive */

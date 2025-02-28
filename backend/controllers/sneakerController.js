@@ -1,7 +1,6 @@
 const SneaksAPI = require("sneaks-api");
 const sneaks = new SneaksAPI();
 
-// Get most popular sneakers
 exports.getMostPopularSneakers = async (req, res) => {
   try {
     sneaks.getMostPopular(10, (err, products) => {
@@ -10,12 +9,13 @@ exports.getMostPopularSneakers = async (req, res) => {
         return res.status(500).json({ error: "Failed to fetch sneakers" });
       }
 
-      if (!Array.isArray(products)) {
-        console.error("Unexpected API Response:", products);
-        return res.json([]); // Ensure it's always an array
-      }
+      // ✅ FILTER FOR ONLY JORDAN & YEEZY SNEAKERS
+      const filteredSneakers = products.filter(sneaker =>
+        sneaker.brand.toLowerCase().includes("jordan") ||
+        sneaker.brand.toLowerCase().includes("yeezy")
+      );
 
-      res.json(products);
+      res.json(filteredSneakers);
     });
   } catch (error) {
     console.error("Server Error:", error);
@@ -23,28 +23,33 @@ exports.getMostPopularSneakers = async (req, res) => {
   }
 };
 
-// Get sneakers by search query
+// Get Sneakers by Search Query
 exports.getSneakersByQuery = async (req, res) => {
   try {
-    const { query } = req.params;
+    const query = req.params.query;
+
+    console.log("Received Search Query:", query); // ✅ Debugging Line
+
+    if (!query) {
+      console.error("❌ No search query provided!");
+      return res.status(400).json({ error: "Search query is required" });
+    }
+
     sneaks.getProducts(query, 10, (err, products) => {
       if (err) {
         console.error("Sneaks API Error:", err);
         return res.status(500).json({ error: "Failed to fetch sneakers" });
       }
 
-      if (!Array.isArray(products)) {
-        console.error("Unexpected API Response:", products);
-        return res.json([]); // Ensure it's always an array
-      }
-
-      res.json(products);
+      console.log("✅ API Response:", products);
+      res.json(products.length ? products : []);
     });
   } catch (error) {
     console.error("Server Error:", error);
     res.status(500).json({ message: "Server Error" });
   }
 };
+
 
 
   

@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container, Form, FormControl, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import logo from "../assets/logo.png"; // ✅ Ensure correct path
+import logo from "../assets/logo.png"; 
 
 function NavigationBar() {
   const [search, setSearch] = useState("");
@@ -18,7 +18,7 @@ function NavigationBar() {
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <img src={logo} alt="Logo" height="40" className="me-2" /> {/* ✅ Logo Fix */}
+          <img src={logo} alt="Logo" height="40" className="me-2" /> {/* Logo Fixed */}
           TheSneakerFellowship
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -26,7 +26,7 @@ function NavigationBar() {
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/favorites">Favorites</Nav.Link>
-            <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link> {/* ✅ Fix Sign Up Link */}
+            <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link> {/* Fixed Sign Up Link */}
             <Nav.Link as={Link} to="/login">Login</Nav.Link>
           </Nav>
           <Form className="d-flex ms-3" onSubmit={handleSearch}>

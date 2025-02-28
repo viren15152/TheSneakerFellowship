@@ -1,13 +1,12 @@
 const express = require("express");
-const { getMostPopularSneakers, getSneakersByQuery } = require("../controllers/sneakerController");
+const { getSneakersByQuery, getMostPopularSneakers } = require("../controllers/sneakerController");
 
 const router = express.Router();
 
-// Fetch most popular sneakers
-router.get("/popular", getMostPopularSneakers);
-
-// Search sneakers by query
-router.get("/search/:query", getSneakersByQuery);
+router.get("/popular", getMostPopularSneakers); // ✅ Popular Sneakers Route
+router.get("/search/:query", getSneakersByQuery); // ✅ Search Route (Fixes 404)
 
 module.exports = router;
+
+
 
