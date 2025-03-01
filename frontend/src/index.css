@@ -60,6 +60,7 @@ a:hover {
 
 .card-title {
   font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 button {
@@ -76,9 +77,8 @@ button:hover {
 }
 
 button:active, button:focus {
-  background-color: #28a745 !important; 
-  border-color: #28a745 !important;
-  color: white !important;
+  background-color: black !important; 
+  border-color: black !important;
 }
 
 /* Responsive */

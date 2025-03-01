@@ -3,8 +3,8 @@ const { getSneakersByQuery, getMostPopularSneakers } = require("../controllers/s
 
 const router = express.Router();
 
-router.get("/popular", getMostPopularSneakers); // ✅ Popular Sneakers Route
-router.get("/search/:query", getSneakersByQuery); // ✅ Search Route (Fixes 404)
+router.get("/popular", getMostPopularSneakers); 
+router.get("/search/:query", getSneakersByQuery); 
 
 module.exports = router;
 

@@ -9,7 +9,7 @@ function SearchResults() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    console.log("🔍 Search Query from URL:", query); // ✅ Debugging Line
+    console.log("🔍 Search Query from URL:", query); // 
 
     if (!query) {
       console.error("❌ No search query provided.");

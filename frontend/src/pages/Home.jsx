@@ -17,16 +17,28 @@ const mySneakers = [
     image: "/sneakers/TSF2.jpg",
   },
   {
-    name: "Nike Air Force 1 Low Tiffany & Co. 1837",
+    name: "Nike Air Force 1 Low Tiffany & Co. 1837 UK/US 9.5/10.5 Available",
     image: "/sneakers/NikeAF1Tiffany.jpg",
   },
   {
-    name: "Jordan 4 Retro Red Thunder",
+    name: "Jordan 4 Retro Red Thunder UK/US 5/6-8.5/9.5 Available",
     image: "/sneakers/Jordan 4 Red Thunder.jpg",
   },
   {
-    name: "Jordan 5 Retro Off-White Sail",
+    name: "Jordan 5 Retro Off-White Sail UK/US 8.5/9.5 Available",
     image: "/sneakers/Jordan5Off-White-Sail.jpg",
+  },
+  {
+    name: "Nike Dunk Low Dover Street Market Triple Black Velvet UK/US 9/10 Available",
+    image: "/sneakers/DMDunk.jpg",
+  },
+  {
+    name: "Jordan 1 Retro High OG Patent Bred UK/US 5/6-8.5/9.5 Available",
+    image: "/sneakers/PatentBred.jpg",
+  },
+  {
+    name: "Nike Dunk Low Off-White Lot 24 UK/US 9.5/10.5 Available",
+    image: "/sneakers/Off-WhiteDunkLot24.jpg",
   },
 ];
 
@@ -47,7 +59,7 @@ function Home() {
 
   return (
     <Container className="mt-4">
-      <h2 className="text-center text-white">Welcome</h2>
+      <h2 className="text-center text-white"></h2>
       <Row>
         {mySneakers.map((sneaker, index) => (
           <Col key={index} md={4} className="mb-4">

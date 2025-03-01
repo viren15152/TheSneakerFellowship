@@ -9,7 +9,7 @@ exports.getMostPopularSneakers = async (req, res) => {
         return res.status(500).json({ error: "Failed to fetch sneakers" });
       }
 
-      // ✅ FILTER FOR ONLY JORDAN & YEEZY SNEAKERS
+      // FILTER FOR ONLY JORDAN & YEEZY SNEAKERS
       const filteredSneakers = products.filter(sneaker =>
         sneaker.brand.toLowerCase().includes("jordan") ||
         sneaker.brand.toLowerCase().includes("yeezy")
@@ -28,7 +28,7 @@ exports.getSneakersByQuery = async (req, res) => {
   try {
     const query = req.params.query;
 
-    console.log("Received Search Query:", query); // ✅ Debugging Line
+    console.log("Received Search Query:", query); // Debugging Line
 
     if (!query) {
       console.error("❌ No search query provided!");
