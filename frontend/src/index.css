@@ -10,7 +10,7 @@
   --card-background: #121212;
   --border-radius: 10px;
 
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color-scheme: dark;
   color: var(--primary-color);
   background-color: var(--background-color);
@@ -60,7 +60,7 @@ a:hover {
 
 .card-title {
   font-weight: bold;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Search Bar & Button Fix */
