@@ -84,16 +84,15 @@ a:hover {
 .btn {
   background-color: white !important;
   color: black !important; 
-  border: 2px solid white !important;
+  border: 2px solid black !important;
   font-weight: bold; 
   transition: 0.3s ease-in-out;
 }
 
 /* On Hover - Keep Button Readable */
 .btn:hover {
-  background-color: rgb(186, 47, 47) !important;
+  background-color: rgb(228, 83, 83) !important;
   color: white !important; 
-  border: 2px solid black !important;
 }
 
 /* On Click / Focus - Fix Text Visibility */
