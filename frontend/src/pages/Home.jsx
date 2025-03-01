@@ -40,6 +40,7 @@ const mySneakers = [
     name: "Nike Dunk Low Off-White Lot 24 UK/US 9.5/10.5 Available",
     image: "/sneakers/Off-WhiteDunkLot24.jpg",
   },
+  
 ];
 
 function Home() {

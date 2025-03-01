@@ -21,7 +21,7 @@ function NavigationBar() {
         {/* Logo */}
         <Navbar.Brand as={Link} to="/" className="fw-bold">
           <img src={logo} alt="Logo" height="40" className="me-2" />
-          TheSneakerFellowship
+          THESNEAKERFELLOWSHIP
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
