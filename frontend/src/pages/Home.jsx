@@ -14,7 +14,7 @@ const mySneakers = [
   },
   {
     name: "",
-    image: "/sneakers/TSF2.jpg",
+    image: "/sneakers/P11.jpg",
   },
   {
     name: "Nike Air Force 1 Low Tiffany & Co. 1837 UK/US 9.5/10.5 Available",

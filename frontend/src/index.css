@@ -91,7 +91,7 @@ a:hover {
 
 /* On Hover - Keep Button Readable */
 .btn:hover {
-  background-color: rebeccapurple !important;
+  background-color: rgb(186, 47, 47) !important;
   color: white !important; 
   border: 2px solid black !important;
 }

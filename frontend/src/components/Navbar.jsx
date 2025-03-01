@@ -28,7 +28,7 @@ function NavigationBar() {
           <Nav className="ms-auto align-items-center"> 
             <Nav.Link as={Link} to="/" className="fw-bold text-uppercase me-3">Home</Nav.Link>
             
-            {/* Shop - Updated to External Link */}
+            {/* Shop - External Link */}
             <Nav.Link 
               as="a" 
               href="https://instabio.cc/3040409RUhOOG" 
@@ -39,7 +39,10 @@ function NavigationBar() {
               Shop
             </Nav.Link>
 
+            {/* Nike & Yeezy Links - Nike comes before Yeezy */}
+            <Nav.Link as={Link} to="/nike" className="fw-bold text-uppercase me-3">Nike</Nav.Link> 
             <Nav.Link as={Link} to="/yeezy" className="fw-bold text-uppercase me-3">Yeezy</Nav.Link> 
+
             <Nav.Link as={Link} to="/signup" className="fw-bold text-uppercase me-3">Sign Up</Nav.Link>
             <Nav.Link as={Link} to="/login" className="fw-bold text-uppercase me-3">Login</Nav.Link>
           </Nav>
@@ -69,6 +72,8 @@ function NavigationBar() {
 }
 
 export default NavigationBar;
+
+
 
 
 
