@@ -81,6 +81,54 @@ const nikeSneakers = [
       "/sneakers/TSAM4.jpg",
     ],
   },
+  {
+    name: "Jordan 1 Retro High Satin Snake Chicago (Women's)",
+    images: [
+      "/sneakers/Jordan1SS.jpg",
+      "/sneakers/Jordan1SS1.jpg",
+    ],
+  },
+  {
+    name: "Jordan 1 High Zoom Air CMFT Patent Chicago (Women's)",
+    images: [
+      "/sneakers/Jordan1C.jpg",
+      "/sneakers/Jordan1C1.jpg",
+      "/sneakers/Jordan1C2.jpg",
+    ],
+  },
+  {
+    name: "Jordan 1 Retro High OG Patent Bred",
+    images: [
+      "/sneakers/PatentBred.jpg",
+      "/sneakers/PatentBred1.jpg",
+      "/sneakers/PatentBred2.jpg",
+      "/sneakers/PatentBred3.jpg",
+    ],
+  },
+  {
+    name: "Jordan 1 Retro High Pollen",
+    images: [
+      "/sneakers/IMG_0344.jpeg",
+      "/sneakers/IMG_0346.jpeg",
+      "/sneakers/IMG_0354.jpeg",
+    ],
+  },
+  {
+    name: "Jordan 1 Retro High Shadow 2.0",
+    images: [
+      "/sneakers/J1SS.jpg",
+      "/sneakers/J1S.jpg",
+      "/sneakers/J1S2.jpg",
+    ],
+  },
+  {
+    name: "Jordan 1 Retro High Court Purple",
+    images: [
+      "/sneakers/IMG_0356.jpeg",
+      "/sneakers/IMG_0357.jpeg",
+      "/sneakers/IMG_0363.jpeg",
+    ],
+  },
 ];
 
 function Nike() {

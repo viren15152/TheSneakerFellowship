@@ -21,14 +21,14 @@ const mySneakers = [
     image: "/sneakers/NikeAF1Tiffany.jpg",
   },
   {
+    name: "Nike SB Dunk Low Travis Scott UK/US 9/10 Available",
+    image: "/sneakers/IMG_9488.jpeg",
+  },
+  {
     name: "Jordan 4 Retro Red Thunder UK/US 5/6-8.5/9.5 Available",
     image: "/sneakers/Jordan 4 Red Thunder.jpg",
   },
-  {
-    name: "Jordan 5 Retro Off-White Sail UK/US 8.5/9.5 Available",
-    image: "/sneakers/Jordan5Off-White-Sail.jpg",
-  },
-  {
+{
     name: "Nike Dunk Low Dover Street Market Triple Black Velvet UK/US 9/10 Available",
     image: "/sneakers/DMDunk.jpg",
   },
