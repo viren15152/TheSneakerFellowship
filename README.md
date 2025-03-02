@@ -1,10 +1,10 @@
 # TheSneakerFellowship
 
-![alt text](<frontend/src/assets/Screenshot 2025-03-02 at 02.01.07.png>)
-![alt text](<frontend/src/assets/Screenshot 2025-03-01 at 23.19.36.png>)
-![alt text](<frontend/src/assets/Screenshot 2025-03-02 at 01.59.06.png>)
-![alt text](<frontend/src/assets/Screenshot 2025-03-02 at 02.03.21.png>)
-![alt text](<frontend/src/assets/Screenshot 2025-03-02 at 02.06.51.png>)
+![1](<frontend/src/assets/Screenshot 2025-03-02 at 02.01.07.png>)
+![2](<frontend/src/assets/Screenshot 2025-03-01 at 23.19.36.png>)
+![3](<frontend/src/assets/Screenshot 2025-03-02 at 01.59.06.png>)
+![4](<frontend/src/assets/Screenshot 2025-03-02 at 02.03.21.png>)
+![5](<frontend/src/assets/Screenshot 2025-03-02 at 02.06.51.png>)
 
 ## Table of Contents
 
