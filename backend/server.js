@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const path = require("path"); // ✅ Needed to serve frontend files
 const connectDB = require("./config/db");
 const SneaksAPI = require("sneaks-api");
 
@@ -44,7 +45,15 @@ app.get("/api/sneaks/prices/:styleID", (req, res) => {
 // Connect to MongoDB
 connectDB();
 
+// ✅ Serve React Frontend in Production
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+  });
+}
+
 // Start the Server
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`🔥 Server running on port ${PORT}`));
-

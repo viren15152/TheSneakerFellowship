@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Card, Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
 
-
 const mySneakers = [
   {
     name: "",
@@ -28,7 +27,7 @@ const mySneakers = [
     name: "Jordan 4 Retro Red Thunder UK 5-8.5 Available",
     image: "/sneakers/Jordan 4 Red Thunder.jpg",
   },
-{
+  {
     name: "Nike Dunk Low Dover Street Market Triple Black Velvet UK 9 Available",
     image: "/sneakers/DMDunk.jpg",
   },
@@ -44,34 +43,36 @@ const mySneakers = [
     name: "Jordan 1 Retro Low OG SP Travis Scott Mocha UK 9.5 Available",
     image: "/sneakers/IMG_6466.jpeg",
   },
-{
+  {
     name: "",
     image: "/sneakers/GHGG.JPG",
   },
   {
     name: "Jordan 4 Retro Off-White Sail (Women's) UK 6.5 Available",
     image: "/sneakers/IMG_6447.jpeg",
-  }, 
+  },
 ];
 
 function Home() {
+  const API_URL = import.meta.env.VITE_API_URL || "";
   const [popularSneakers, setPopularSneakers] = useState([]);
 
   useEffect(() => {
     const fetchPopularSneakers = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5001/api/sneakers/popular");
+        const { data } = await axios.get(`${API_URL}/api/sneakers/popular`);
         setPopularSneakers(data);
       } catch (error) {
         console.error("Error fetching popular sneakers:", error);
       }
     };
-    fetchPopularSneakers();
-  }, []);
+
+    fetchPopularSneakers(); 
+  }, [API_URL]); 
 
   return (
     <Container className="mt-4">
-      <h2 className="text-center text-white"></h2>
+      <h2 className="text-center text-white">Featured Sneakers</h2>
       <Row>
         {mySneakers.map((sneaker, index) => (
           <Col key={index} md={4} className="mb-4">
@@ -87,28 +88,27 @@ function Home() {
 
       <h2 className="text-center text-white mt-5">Future Releases</h2>
       <Row>
-  {popularSneakers.length > 0 ? (
-    popularSneakers.map((sneaker, index) => (
-      <Col key={index} md={4} className="mb-4">
-        <Card bg="dark" text="white" className="shadow">
-          <Card.Img 
-            variant="top" 
-            src={sneaker.thumbnail || "/sneakers/default.jpg"} 
-            alt={sneaker.shoeName} 
-            onError={(e) => { e.target.src = "/sneakers/default.jpg"; }}
-          />
-          <Card.Body>
-            <Card.Title>{sneaker.shoeName}</Card.Title>
-            <Card.Text>{sneaker.brand} - {sneaker.colorway}</Card.Text>
-          </Card.Body>
-        </Card>
-      </Col>
-    ))
-  ) : (
-    <p className="text-center text-white">No popular sneakers found.</p>
-  )}
-</Row>
-
+        {popularSneakers.length > 0 ? (
+          popularSneakers.map((sneaker, index) => (
+            <Col key={index} md={4} className="mb-4">
+              <Card bg="dark" text="white" className="shadow">
+                <Card.Img 
+                  variant="top" 
+                  src={sneaker.thumbnail || "/sneakers/default.jpg"} 
+                  alt={sneaker.shoeName} 
+                  onError={(e) => { e.target.src = "/sneakers/default.jpg"; }}
+                />
+                <Card.Body>
+                  <Card.Title>{sneaker.shoeName}</Card.Title>
+                  <Card.Text>{sneaker.brand} - {sneaker.colorway}</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))
+        ) : (
+          <p className="text-center text-white">No popular sneakers found.</p>
+        )}
+      </Row>
     </Container>
   );
 }

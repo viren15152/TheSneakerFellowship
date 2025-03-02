@@ -10,16 +10,18 @@ function Signup() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
+  const API_URL = import.meta.env.VITE_API_URL || "";
+
   const handleSignup = async (e) => {
     e.preventDefault();
     setError(null);
     try {
-      const { data } = await axios.post("http://localhost:5001/api/auth/register", {
+      const { data } = await axios.post(`${API_URL}/api/auth/register`, {
         name,
         email,
         password,
       });
-
+  
       if (data.success) {
         navigate("/login"); // Redirect to login after successful signup
       }
@@ -27,7 +29,7 @@ function Signup() {
       setError(error.response?.data?.message || "Signup failed");
     }
   };
-
+  
   return (
     <Container className="mt-4">
       <h2 className="text-center text-white">Sign Up</h2>

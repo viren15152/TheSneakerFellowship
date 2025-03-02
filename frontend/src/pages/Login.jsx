@@ -8,10 +8,12 @@ function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  const API_URL = import.meta.env.VITE_API_URL || "";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:5001/api/auth/login", {
+      const { data } = await axios.post(`${API_URL}/api/auth/login`, {
         email,
         password,
       });
@@ -21,7 +23,7 @@ function Login() {
       alert("Login failed");
     }
   };
-
+  
   return (
     <Container className="mt-5">
       <h2 className="text-white text-center">Login</h2>
