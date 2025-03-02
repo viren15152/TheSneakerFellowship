@@ -19,18 +19,29 @@
 
 ## Description
 
-Description
-TheSneakerFellowship is a sneaker collection and marketplace app built with the MERN (MongoDB, Express, React, Node.js) stack. It provides users with the ability to search for sneakers, view details, and save their favorites. Additionally, the platform integrates the Sneaks API to display the most popular sneakers and their resale market prices.
+(Version 1.0)
+THESNEAKERFELLOWSHIP is a sneaker marketplace web application built with the MERN stack (MongoDB, Express, React, Node.js). This platform serves as a hub for sneaker enthusiasts, allowing users to sign up, log in, and search for sneakers while providing direct links to purchase them through my own e-commerce platforms or StockX. 
+Additionally, the app integrates the Sneaks API to showcase upcoming sneaker releases, keeping users informed about the latest drops.
 
-🚀 Features:
+🚀 Features (Version 1.0):
 1. Sneaker Search: Search for sneakers by brand, name, or model.
-2. Sneaker Gallery: Showcases popular sneakers and a personal sneaker collection.
+2. Sneaker Gallery: Showcases popular sneakers and my personal stock with more.
 3. Dynamic Filters: Sort and filter results based on brand (Nike, Yeezy, Jordan, etc.).
 4. Sneaks API Integration 
 5. User Authentication: Sign up and log in functionality for a personalized experience.
 6. Fully Responsive Design: Optimized for desktop and mobile.
 7. MongoDB Cloud Database: Stores user data, sneaker collections, and user preferences.
 8. Render Deployment: Fully hosted on Render for easy access.
+
+Future Enhancements & Planned Features
+As I continue to develop my skills, future updates will introduce a fully integrated shopping experience, including:
+
+1. Dedicated Shop Page: A built-in store will replace external links, allowing users to browse and buy directly from the site.
+2. Shopping Cart & Checkout System: Users will be able to add sneakers to their cart and complete purchases with ease.
+3. Integration with Payment APIs (Stripe, PayPal): Secure and seamless transactions will be enabled through trusted payment gateways.
+4. Order Tracking & User Profiles: Users will have personalized accounts to track orders and manage their purchase history.
+5. Admin Panel for Inventory Management: A backend dashboard for stock management, order processing, and analytics.
+6. I will also add my full stock list as I have over 1000 pairs. 
 
 ## Technologies Used
 
