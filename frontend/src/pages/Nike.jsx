@@ -129,6 +129,22 @@ const nikeSneakers = [
       "/sneakers/IMG_0363.jpeg",
     ],
   },
+  {
+    name: "Jordan 1 Low Diamond Shorts",
+    images: [
+      "/sneakers/J1L.jpg",
+      "/sneakers/J1L1.jpg",
+      "/sneakers/J1L3.jpg",
+    ],
+  },
+  {
+    name: "Jordan 1 Low SETrue Blue (GS)",
+    images: [
+      "/sneakers/IMG_4271.jpeg",
+      "/sneakers/IMG_4275.jpeg",
+      "/sneakers/IMG_4277.jpeg",
+    ],
+  },
 ];
 
 function Nike() {

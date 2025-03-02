@@ -17,30 +17,41 @@ const mySneakers = [
     image: "/sneakers/P11.jpg",
   },
   {
-    name: "Nike Air Force 1 Low Tiffany & Co. 1837 UK/US 9.5/10.5 Available",
+    name: "Nike Air Force 1 Low Tiffany & Co. 1837 UK 9.5 Available",
     image: "/sneakers/NikeAF1Tiffany.jpg",
   },
   {
-    name: "Nike SB Dunk Low Travis Scott UK/US 9/10 Available",
+    name: "Nike SB Dunk Low Travis Scott UK 9 Available",
     image: "/sneakers/IMG_9488.jpeg",
   },
   {
-    name: "Jordan 4 Retro Red Thunder UK/US 5/6-8.5/9.5 Available",
+    name: "Jordan 4 Retro Red Thunder UK 5-8.5 Available",
     image: "/sneakers/Jordan 4 Red Thunder.jpg",
   },
 {
-    name: "Nike Dunk Low Dover Street Market Triple Black Velvet UK/US 9/10 Available",
+    name: "Nike Dunk Low Dover Street Market Triple Black Velvet UK 9 Available",
     image: "/sneakers/DMDunk.jpg",
   },
   {
-    name: "Jordan 1 Retro High OG Patent Bred UK/US 5/6-8.5/9.5 Available",
-    image: "/sneakers/PatentBred.jpg",
+    name: "Nike Dunk Low EMB NBA 75th Anniversary Chicago",
+    image: "/sneakers/DunkLowC.jpg",
   },
   {
-    name: "Nike Dunk Low Off-White Lot 24 UK/US 9.5/10.5 Available",
+    name: "Nike Dunk Low Off-White Lot 24 UK 9.5 Available",
     image: "/sneakers/Off-WhiteDunkLot24.jpg",
   },
-  
+  {
+    name: "Jordan 1 Retro Low OG SP Travis Scott Mocha UK 9.5 Available",
+    image: "/sneakers/IMG_6466.jpeg",
+  },
+{
+    name: "",
+    image: "/sneakers/GHGG.JPG",
+  },
+  {
+    name: "Jordan 4 Retro Off-White Sail (Women's) UK 6.5 Available",
+    image: "/sneakers/IMG_6447.jpeg",
+  }, 
 ];
 
 function Home() {
