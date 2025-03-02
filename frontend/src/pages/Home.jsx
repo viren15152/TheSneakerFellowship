@@ -72,7 +72,7 @@ function Home() {
 
   return (
     <Container className="mt-4">
-      <h2 className="text-center text-white">Featured Sneakers</h2>
+      <h2 className="text-center text-white"></h2>
       <Row>
         {mySneakers.map((sneaker, index) => (
           <Col key={index} md={4} className="mb-4">
