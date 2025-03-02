@@ -23,14 +23,14 @@ Description
 TheSneakerFellowship is a sneaker collection and marketplace app built with the MERN (MongoDB, Express, React, Node.js) stack. It provides users with the ability to search for sneakers, view details, and save their favorites. Additionally, the platform integrates the Sneaks API to display the most popular sneakers and their resale market prices.
 
 🚀 Features:
-✅ Sneaker Search: Search for sneakers by brand, name, or model.
-✅ Sneaker Gallery: Showcases popular sneakers and a personal sneaker collection.
-✅ Dynamic Filters: Sort and filter results based on brand (Nike, Yeezy, Jordan, etc.).
-✅ Sneaks API Integration 
-✅ User Authentication: Sign up and log in functionality for a personalized experience.
-✅ Fully Responsive Design: Optimized for desktop and mobile.
-✅ MongoDB Cloud Database: Stores user data, sneaker collections, and user preferences.
-✅ Render Deployment: Fully hosted on Render for easy access.
+1. Sneaker Search: Search for sneakers by brand, name, or model.
+2. Sneaker Gallery: Showcases popular sneakers and a personal sneaker collection.
+3. Dynamic Filters: Sort and filter results based on brand (Nike, Yeezy, Jordan, etc.).
+4. Sneaks API Integration 
+5. User Authentication: Sign up and log in functionality for a personalized experience.
+6. Fully Responsive Design: Optimized for desktop and mobile.
+7. MongoDB Cloud Database: Stores user data, sneaker collections, and user preferences.
+8. Render Deployment: Fully hosted on Render for easy access.
 
 ## Technologies Used
 
