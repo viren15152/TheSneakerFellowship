@@ -32,7 +32,7 @@ const mySneakers = [
     image: "/sneakers/DMDunk.jpg",
   },
   {
-    name: "Nike Dunk Low EMB NBA 75th Anniversary Chicago",
+    name: "Nike Dunk Low EMB NBA 75th Anniversary Chicago UK 4-6 Available",
     image: "/sneakers/DunkLowC.jpg",
   },
   {
@@ -61,14 +61,18 @@ function Home() {
     const fetchPopularSneakers = async () => {
       try {
         const { data } = await axios.get(`${API_URL}/api/sneakers/popular`);
-        setPopularSneakers(data);
+        console.log("📢 API Response for Popular Sneakers:", data); // Debugging line
+  
+        // Ensure it's always an array
+        setPopularSneakers(Array.isArray(data) ? data : []);
       } catch (error) {
-        console.error("Error fetching popular sneakers:", error);
+        console.error("❌ Error fetching popular sneakers:", error);
+        setPopularSneakers([]); // Prevents crashes
       }
     };
-
-    fetchPopularSneakers(); 
-  }, [API_URL]); 
+  
+    fetchPopularSneakers();
+  }, [API_URL]);  
 
   return (
     <Container className="mt-4">

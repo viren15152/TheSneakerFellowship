@@ -9,32 +9,37 @@ function SearchResults() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    console.log("🔍 Search Query from URL:", query); // 
-
+    console.log("🔍 Search Query from URL:", query);
+  
     if (!query) {
       console.error("❌ No search query provided.");
       setError("No search query entered.");
       return;
     }
-    const API_URL = import.meta.env.VITE_API_URL || "";
-
+  
+    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5001";
+  
     const fetchSneakers = async () => {
       try {
         console.log("Fetching from API:", `${API_URL}/api/sneakers/search/${query}`);
         const { data } = await axios.get(`${API_URL}/api/sneakers/search/${query}`);
-    
+  
         console.log("✅ API Response:", data);
-        if (!Array.isArray(data)) throw new Error("Invalid API response");
-    
+  
+        if (!Array.isArray(data)) {
+          throw new Error("Invalid API response"); // Prevents breaking UI
+        }
+  
         setSneakers(data);
       } catch (error) {
         console.error("❌ Error fetching sneakers:", error);
         setError("Failed to load sneakers.");
+        setSneakers([]); // Ensures frontend does not crash
       }
-    };    
-
+    };
+  
     fetchSneakers();
-  }, [query]);
+  }, [query]);  
 
   return (
     <Container className="mt-4">

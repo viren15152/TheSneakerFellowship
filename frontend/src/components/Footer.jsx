@@ -19,8 +19,7 @@ function Footer() {
             <img src={instagramLogo} alt="Instagram" height="30" />
           </a>
         </div>
-
-        <p className="text-white mt-3">&copy; 2024 The Sneaker Fellowship. All rights reserved.</p>
+        <p className="text-white mt-3">&copy; 2025 The Sneaker Fellowship. All rights reserved.</p>
       </Container>
     </Navbar>
   );
