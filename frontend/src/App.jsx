@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"; 
 import Home from "./pages/Home";
 import SearchResults from "./pages/SearchResults";
 import Signup from "./pages/Signup";
@@ -7,14 +7,16 @@ import Nike from "./pages/Nike";
 import Yeezy from "./pages/Yeezy"; 
 import NavigationBar from "./components/Navbar";
 import Footer from "./components/Footer";  
+import Analytics from "./Analytics"; // Import Analytics
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <>
+      <Analytics /> {/* Tracks page views */}
       <NavigationBar />
-      <main> {/* Makes sure content expands to push footer down */}
-        <Routes>
+      <main>
+        <Routes> 
           <Route path="/" element={<Home />} />
           <Route path="/search/:query" element={<SearchResults />} />
           <Route path="/signup" element={<Signup />} />
@@ -30,6 +32,8 @@ function App() {
 }
 
 export default App;
+
+
 
 
 
