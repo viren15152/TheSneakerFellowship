@@ -14,12 +14,26 @@ function Footer() {
           <Nav.Link as={Link} to="/signup" className="text-white mx-3 fw-bold text-uppercase">Sign Up</Nav.Link>
         </Nav>
 
-        <div>
-          <a href="https://www.instagram.com/thesneakerfellowship/?hl=en" target="_blank" rel="noopener noreferrer">
-            <img src={instagramLogo} alt="Instagram" height="30" />
-          </a>
-        </div>
-        <p className="text-white mt-3">&copy; 2025 The Sneaker Fellowship. All rights reserved.</p>
+       
+        <div class="social-links">
+        <a href="https://www.instagram.com/thesneakerfellowship" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://facebook.com" target="_blank">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+            <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="mailto:thesneakerfellowship@gmail.com">
+            <i class="fas fa-envelope"></i> Email
+        </a>
+        <a href="tel:+44943524081">
+            <i class="fas fa-phone"></i> Call Us
+        </a>
+    </div>
+    <p className="text-white mt-3">THESNEAKERFELLOWSHIP &copy;</p>
+    <i class="fa fa-fire service-icon"></i>
       </Container>
     </Navbar>
   );
