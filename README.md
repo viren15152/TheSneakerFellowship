@@ -4,7 +4,7 @@
 ![2](<frontend/src/assets/Screenshot 2025-03-01 at 23.19.36.png>)
 ![3](<frontend/src/assets/Screenshot 2025-03-02 at 01.59.06.png>)
 ![4](<frontend/src/assets/Screenshot 2025-03-02 at 02.03.21.png>)
-![5](<frontend/src/assets/Screenshot 2025-03-02 at 02.06.51.png>)
+![5](<frontend/src/assets/Screenshot 2025-03-08 at 23.21.28.png>)
 
 ## Table of Contents
 
