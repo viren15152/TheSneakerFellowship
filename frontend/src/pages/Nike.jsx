@@ -35,7 +35,10 @@ const nikeSneakers = [
   },
   {
     name: "Jordan 5 Retro Off-White Sail UK 8.5",
-    images: [ "/sneakers/Jordan5Off-White-Sail.jpg",
+    images: [ 
+      "/sneakers/Jordan5Off-White-Sail.jpg",
+      "/sneakers/Jordan5Off-White-Sail2.jpg",
+      "/sneakers/Jordan5Off-White-Sail3.jpg",
     ],
   },
   {
