@@ -61,9 +61,10 @@ function NavigationBar() {
             </Form>
 
             {/* Instagram Icon */}
-            <a href="https://www.instagram.com/thesneakerfellowship/?hl=en" target="_blank" rel="noopener noreferrer">
-              <img src={instagramLogo} alt="Instagram" height="40" />
+            <a href="https://www.instagram.com/thesneakerfellowship" target="_blank" rel="noopener noreferrer" className="text-light fw-bold ms-2">
+            <i className="fab fa-instagram fa-2x"></i> 
             </a>
+
           </div>
         </Navbar.Collapse>
       </Container>

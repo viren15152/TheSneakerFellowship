@@ -47,6 +47,12 @@ main {
   z-index: 1030; 
 }
 
+#ig-link {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .footer {
   background-color: var(--secondary-color);
   text-align: center;
@@ -140,7 +146,7 @@ a:hover {
 .social-links a {
   text-decoration: none;
   color: whitesmoke;
-  font-size: 40px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
@@ -163,5 +169,37 @@ a:hover {
   }
 }
 
+@media (max-width: 480px) {
+  .navbar {
+    position: relative; 
+    text-align: center; 
+    padding: 10px 0;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .social-links a {
+    display: block; 
+    font-size: 12px;
+    margin-bottom: 5px; 
+  }
+
+  .social-links i {
+    font-size: 14px; 
+  }
+
+  .card {
+    width: 90%; 
+    margin: 0 auto 15px; 
+  }
+
+  .d-flex {
+    flex-direction: column; 
+    align-items: center; 
+  }
+}
 
 

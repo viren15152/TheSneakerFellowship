@@ -32,8 +32,11 @@ function Footer() {
             <i class="fas fa-phone"></i> Call Us
         </a>
     </div>
-    <p className="text-white mt-3">THESNEAKERFELLOWSHIP &copy;</p>
-    <i class="fa fa-fire service-icon"></i>
+    <div className="d-flex align-items-center justify-content-center w-100 mt-3">
+          <i className="fa fa-fire service-icon fa-2x text-danger me-2"></i>
+          <p className="text-white m-1">THESNEAKERFELLOWSHIP &copy;</p>
+        </div>
+
       </Container>
     </Navbar>
   );
