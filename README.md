@@ -1,6 +1,6 @@
 # TheSneakerFellowship
 
-![1](<frontend/src/assets/Screenshot 2025-03-02 at 02.01.07.png>)
+![1](<frontend/src/assets/Screenshot 2025-03-12 at 04.20.08.png>)
 ![2](<frontend/src/assets/Screenshot 2025-03-01 at 23.19.36.png>)
 ![3](<frontend/src/assets/Screenshot 2025-03-02 at 01.59.06.png>)
 ![4](<frontend/src/assets/Screenshot 2025-03-02 at 02.03.21.png>)
