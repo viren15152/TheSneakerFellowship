@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const path = require("path"); // ✅ Needed to serve frontend files
+const path = require("path");
 const connectDB = require("./config/db");
 const SneaksAPI = require("sneaks-api");
 
@@ -12,16 +12,24 @@ const userRoutes = require("./routes/userRoutes");
 const app = express();
 const sneaks = new SneaksAPI();
 
-// Middleware
-app.use(cors());
+// CONNECT TO MONGO
+connectDB();
+
+// CORS CONFIGURATION
+app.use(cors({
+  origin: "https://thesneakerfellowship.onrender.com", // your frontend URL
+  credentials: true
+}));
+
+// JSON BODY PARSING
 app.use(express.json());
 
-// Routes
+// ROUTES
 app.use("/api/sneakers", sneakerRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 
-// Add a new API route to fetch sneakers from Sneaks API
+// SNEAKS API ROUTES
 app.get("/api/sneaks/search/:query", (req, res) => {
   const { query } = req.params;
   sneaks.getProducts(query, 10, (err, products) => {
@@ -42,10 +50,7 @@ app.get("/api/sneaks/prices/:styleID", (req, res) => {
   });
 });
 
-// Connect to MongoDB
-connectDB();
-
-// ✅ Serve React Frontend in Production
+// SERVE FRONTEND IN PRODUCTION
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
@@ -54,6 +59,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-// Start the Server
+// START SERVER
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`🔥 Server running on port ${PORT}`));
