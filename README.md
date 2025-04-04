@@ -98,7 +98,7 @@ As I continue to develop my skills, future updates will introduce a fully integr
    cd backend
    node server.js
    ```
-2. **Star the backend:** 
+2. **Start the backend:** 
    ```
    cd frontend
    npm run dev
