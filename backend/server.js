@@ -64,6 +64,11 @@ app.get("/api/health", (req, res) => {
   res.status(200).send("✅ Server is healthy");
 });
 
+// Support UptimeRobot's HEAD request
+app.head("/api/health", (req, res) => {
+  res.sendStatus(200);
+});
+
 // START SERVER
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`🔥 Server running on port ${PORT}`));
