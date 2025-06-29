@@ -17,7 +17,7 @@ connectDB();
 
 // CORS CONFIGURATION
 app.use(cors({
-  origin: "https://thesneakerfellowship.onrender.com", // your frontend URL
+  origin: "https://thesneakerfellowship.onrender.com", // frontend URL
   credentials: true
 }));
 
