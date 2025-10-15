@@ -40,16 +40,16 @@ const mySneakers = [
     image: "/sneakers/Off-WhiteDunkLot24.jpg",
   },
   {
-    name: "Jordan 1 Retro Low OG SP Travis Scott Mocha UK 9.5 Available",
-    image: "/sneakers/IMG_6466.jpeg",
+    name: "Nike x Drake NOCTA Tactical Vest - £500",
+    image: "/sneakers/IMG_9658.jpeg",
   },
   {
     name: "",
     image: "/sneakers/GHGG.JPG",
   },
   {
-    name: "Jordan 4 Retro Off-White Sail (Women's) UK 6.5 Available",
-    image: "/sneakers/IMG_6447.jpeg",
+    name: "Nike Air Max 90 Off-White Desert Ore",
+    image: "/sneakers/DesertOre28.jpg",
   },
 ];
 
