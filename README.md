@@ -115,9 +115,9 @@ https://thesneakerfellowship.onrender.com/
 
 ## License
 
-![License Badge](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
 
-This project is licensed under the MIT License - see the [MIT License](https://opensource.org/licenses/MIT) for details.
+This project is licensed under the Apache License 2.0 – see the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0) for details.
 
 ## Contact
 
