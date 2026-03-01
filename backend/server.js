@@ -12,16 +12,9 @@ const app = express();
 
 connectDB();
 
-const corsOptions = {
-  origin: "https://thesneakerfellowship.onrender.com",
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-};
+app.use(cors());
+app.options("*", cors());
 
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions)); // Handle preflight
-
-// Middleware
 app.use(express.json());
 
 // Routes
@@ -30,8 +23,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 
 // Health check
-app.get("/api/health", (req, res) => res.status(200).send("Server is healthy"));
-app.head("/api/health", (req, res) => res.sendStatus(200));
+app.get("/api/health", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.status(200).send("Server is healthy");
+});
 
 // Serve frontend in production
 if (process.env.NODE_ENV === "production") {
