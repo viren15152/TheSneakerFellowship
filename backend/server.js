@@ -12,8 +12,14 @@ const app = express();
 
 connectDB();
 
-// CORS
-app.use(cors({ origin: "*" }));
+const corsOptions = {
+  origin: "https://thesneakerfellowship.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions)); // Handle preflight
 
 // Middleware
 app.use(express.json());
