@@ -9,7 +9,7 @@ const mySneakers = [
   },
   {
     name: "",
-    image: "/sneakers/TSF.jpg", 
+    image: "/sneakers/TSF.jpg",
   },
   {
     name: "",
@@ -60,12 +60,24 @@ function Home() {
   useEffect(() => {
     const fetchPopularSneakers = async () => {
       try {
-        const { data } = await axios.get(`${API_URL}/api/sneakers/popular`);
-        console.log("📢 API Response for Popular Sneakers:", data);
+        const { data } = await axios.get(
+          `${API_URL}/api/sneakers/popular`
+        );
 
-        setPopularSneakers(Array.isArray(data) ? data : []);
+        console.log(
+          "📢 API Response for Popular Sneakers:",
+          data
+        );
+
+        setPopularSneakers(
+          Array.isArray(data) ? data : []
+        );
       } catch (error) {
-        console.error("❌ Error fetching popular sneakers:", error);
+        console.error(
+          "❌ Error fetching popular sneakers:",
+          error
+        );
+
         setPopularSneakers([]);
       }
     };
@@ -76,18 +88,34 @@ function Home() {
   return (
     <Container className="mt-4">
       <h2 className="text-center text-white"></h2>
+
       <Row>
         {mySneakers.map((sneaker, index) => (
           <Col key={index} md={4} className="mb-4">
-            <Card bg="dark" text="white" className="shadow text-center">
-              {/* Display the sneaker image */}
-              <Card.Img variant="top" src={sneaker.image} alt={sneaker.name || "Sneaker"} />
-              <Card.Body>
-                {/* Display sneaker name only if it exists */}
-                {sneaker.name && <Card.Title>{sneaker.name}</Card.Title>}
+            <Card
+              bg="dark"
+              text="white"
+              className="shadow text-center"
+            >
+              <Card.Img
+                variant="top"
+                src={sneaker.image}
+                alt={sneaker.name || "Sneaker"}
+                onError={(e) => {
+                  e.target.src =
+                    "/sneakers/default.jpg";
+                }}
+              />
 
-                {/* Show Instagram icon below the image only for TSF card */}
-                {sneaker.image === "/sneakers/TSF.jpg" && (
+              <Card.Body>
+                {sneaker.name && (
+                  <Card.Title>
+                    {sneaker.name}
+                  </Card.Title>
+                )}
+
+                {sneaker.image ===
+                  "/sneakers/TSF.jpg" && (
                   <div className="mt-3">
                     <a
                       href="https://www.instagram.com/thesneakerfellowship"
@@ -97,7 +125,13 @@ function Home() {
                     >
                       <i className="fab fa-instagram"></i>
                     </a>
-                    <p id="ig-link" className="mt-2">Follow Us on Instagram</p>
+
+                    <p
+                      id="ig-link"
+                      className="mt-2"
+                    >
+                      Follow Us on Instagram
+                    </p>
                   </div>
                 )}
               </Card.Body>
@@ -106,31 +140,66 @@ function Home() {
         ))}
       </Row>
 
-      <h2 className="text-center text-white mt-5">Future Releases</h2>
+      <h2 className="text-center text-white mt-5">
+        Popular Sneakers
+      </h2>
+
       <Row>
         {popularSneakers.length > 0 ? (
           popularSneakers.map((sneaker, index) => (
-            <Col key={index} md={4} className="mb-4">
-              <Card bg="dark" text="white" className="shadow">
+            <Col
+              key={index}
+              md={4}
+              className="mb-4"
+            >
+              <Card
+                bg="dark"
+                text="white"
+                className="shadow"
+              >
                 <Card.Img
                   variant="top"
-                  src={sneaker.thumbnail || "/sneakers/default.jpg"}
+                  src={
+                    sneaker.thumbnail ||
+                    "/sneakers/default.jpg"
+                  }
                   alt={sneaker.shoeName}
                   onError={(e) => {
-                    e.target.src = "/sneakers/default.jpg";
+                    e.target.src =
+                      "/sneakers/default.jpg";
                   }}
                 />
+
                 <Card.Body>
-                  <Card.Title>{sneaker.shoeName}</Card.Title>
+                  <Card.Title>
+                    {sneaker.shoeName}
+                  </Card.Title>
+
                   <Card.Text>
-                    {sneaker.brand} - {sneaker.colorway}
+                    {sneaker.brand} -{" "}
+                    {sneaker.colorway}
                   </Card.Text>
+
+                  <a
+                    href={
+                      sneaker.resellLinks
+                        ?.stockX ||
+                      "https://stockx.com"
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-success"
+                  >
+                    Buy on StockX
+                  </a>
                 </Card.Body>
               </Card>
             </Col>
           ))
         ) : (
-          <p className="text-center text-white">No popular sneakers found.</p>
+          <p className="text-center text-white">
+            No popular sneakers found.
+          </p>
         )}
       </Row>
     </Container>
@@ -138,4 +207,3 @@ function Home() {
 }
 
 export default Home;
-
