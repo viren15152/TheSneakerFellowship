@@ -24,6 +24,21 @@
 THESNEAKERFELLOWSHIP is a sneaker marketplace web application built with the MERN stack (MongoDB, Express, React, Node.js). This platform serves as a hub for sneaker enthusiasts, allowing users to sign up, log in, and search for sneakers while providing direct links to purchase them through my own e-commerce platforms or StockX. 
 Additionally, the app integrates the Sneaks API to showcase upcoming sneaker releases, keeping users informed about the latest drops.
 
+## API Notice
+
+The original sneaker search used the `sneaks-api` package for live StockX sneaker data.
+
+Due to recent API instability and scraping restrictions from StockX, the project was updated to use a local sneaker dataset as a fallback solution.
+
+Current improvements include:
+- reliable sneaker searching
+- faster loading times
+- preserved StockX image URLs
+- fallback image handling for broken images
+- improved deployment stability on Render
+
+Future updates may include integration with an official sneaker API or database-powered sneaker management.
+
 🚀 Features (Version 1.0):
 1. Sneaker Search: Search for sneakers by brand, name, or model.
 2. Sneaker Gallery: Showcases popular sneakers and my personal stock with more.
