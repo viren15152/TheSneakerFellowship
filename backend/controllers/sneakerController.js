@@ -1,79 +1,32 @@
-const SneaksAPI = require("sneaks-api");
-const sneaks = new SneaksAPI();
+const mockSneakers = require("../data/mockSneakers.json");
 
 exports.getMostPopularSneakers = async (req, res) => {
   try {
-    let responded = false;
-
-    const timeout = setTimeout(() => {
-      if (!responded) {
-        responded = true;
-        return res.status(200).json([]);
-      }
-    }, 5000);
-
-    sneaks.getMostPopular(10, (err, products) => {
-      if (responded) return;
-
-      clearTimeout(timeout);
-      responded = true;
-
-      if (err || !Array.isArray(products)) {
-        console.error("Sneaks API Error:", err);
-        return res.status(200).json([]);
-      }
-
-      const filteredSneakers = products.filter(
-        (sneaker) =>
-          sneaker?.brand?.toLowerCase().includes("jordan") ||
-          sneaker?.brand?.toLowerCase().includes("yeezy")
-      );
-
-      return res.status(200).json(filteredSneakers);
-    });
+    return res.status(200).json(mockSneakers.slice(0, 12));
   } catch (error) {
-    console.error("Server Error:", error);
+    console.error("Error loading popular sneakers:", error);
     return res.status(200).json([]);
   }
 };
 
 exports.getSneakersByQuery = async (req, res) => {
   try {
-    const query = req.params.query;
+    const query = req.params.query?.toLowerCase();
 
     if (!query) {
-
       return res.status(200).json([]);
     }
 
-    let responded = false;
+    const filteredSneakers = mockSneakers.filter((sneaker) =>
+      sneaker.shoeName.toLowerCase().includes(query) ||
+      sneaker.brand.toLowerCase().includes(query) ||
+      sneaker.colorway.toLowerCase().includes(query)
+    );
 
-    const timeout = setTimeout(() => {
-      if (!responded) {
-        responded = true;
-        return res.status(200).json([]);
-      }
-    }, 5000);
+    return res.status(200).json(filteredSneakers);
 
-    sneaks.getProducts(query, 10, (err, products) => {
-      if (responded) return;
-
-      clearTimeout(timeout);
-      responded = true;
-
-      if (err || !Array.isArray(products)) {
-        console.error("Sneaks API Error:", err);
-        return res.status(200).json([]);
-      }
-
-      return res.status(200).json(products.length ? products : []);
-    });
   } catch (error) {
-    console.error("Server Error:", error);
+    console.error("Search Error:", error);
     return res.status(200).json([]);
   }
 };
-
-
-
-  
